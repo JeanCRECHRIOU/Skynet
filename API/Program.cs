@@ -33,7 +33,6 @@ namespace API
                     var logger = loggeFactory.CreateLogger<Program>();
                     logger.LogError(ex, "Ann error occured during migration");
                 }
-
             }
 
             host.Run();

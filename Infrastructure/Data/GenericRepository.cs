@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
@@ -32,8 +28,8 @@ namespace Infrastructure.Data
 
         public async Task<T> GetEntityWithSpec(ISpecification<T> spec)
         {
-            var toto = await ApplySpecification(spec).FirstOrDefaultAsync();
-            return toto ;
+            return await ApplySpecification(spec).FirstOrDefaultAsync();
+            
         }
 
         public async Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec)
